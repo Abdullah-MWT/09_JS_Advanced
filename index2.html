@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval and ClearInterval</title>
+</head>
+<body>
+     <h1>Welcome To JavaScript Course</h1> 
+     <button id="start">Start</button>
+     <button id="stop">Stop</button>
+     
+    <script>
+        const sayMyName = function() {
+            console.log('Hi, Abdullah');
+        }
+        let sayMyNameFunc;
+         document.getElementById('start').addEventListener('click', () => {
+             sayMyNameFunc = setInterval(sayMyName, 3000);
+         });
+
+         document.getElementById('stop').addEventListener('click', () => {
+            clearInterval(sayMyNameFunc)
+         })
+        
+    </script>
+</body>
+</html>

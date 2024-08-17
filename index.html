@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut and clearTimeOut</title>
+</head>
+<body>
+     <h1>Welcome To JavaScript Course</h1> 
+     <button id="stop">Stop</button>
+   
+    <script>
+        // SetTimeOut    :- It does any function after some specific interval of time once
+         const giveAlert = function() {
+            alert('I am Executed after 3 Seconds');
+         }
+         const giveAlertFunc = setTimeout(giveAlert, 3000);
+        
+        // clearTimeOut   :- It does any function after some specific interval of time again and again 
+        document.getElementById('stop').addEventListener('click', () => {
+            clearTimeout(giveAlertFunc);
+            alert('I Was Stopped before Execution');
+        })
+    </script>
+</body>
+</html>
